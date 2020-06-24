@@ -1,25 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
+import Parent from './component/parent';
 import './App.css';
+import counterContext from './component/countContext';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <counterContext.Provider value={224}>
+      <div className="App">
+        <Parent name="Taha" />
+      </div>
+    </counterContext.Provider>
   );
 }
 
